@@ -18,6 +18,7 @@
 #include "ptz-controls.hpp"
 #include "settings.hpp"
 #include "ptz-visca.hpp"
+#include "ptz-pelco_p.hpp"
 
 OBS_DECLARE_MODULE()
 OBS_MODULE_AUTHOR("Grant Likely <grant.likely@secretlab.ca>");

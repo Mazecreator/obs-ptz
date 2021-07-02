@@ -8,6 +8,7 @@
 #include <obs.hpp>
 #include "ptz-device.hpp"
 #include "ptz-visca.hpp"
+#include "ptz-pelco-p.hpp"
 
 PTZListModel PTZDevice::ptz_list_model;
 QVector<PTZDevice *> PTZDevice::devices;
@@ -69,6 +70,8 @@ PTZDevice *PTZDevice::make_device(OBSData config)
 		ptz = new PTZSimulator(config);
 	if (type == "visca")
 		ptz = new PTZViscaSerial(config);
+	if (type == "pelco-p")
+		ptz = new PTZPelcoP(config);
 	if (type == "visca-over-ip")
 		ptz = new PTZViscaOverIP(config);
 	return ptz;
