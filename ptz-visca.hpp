@@ -9,7 +9,7 @@
 #include <QObject>
 #include <QTimer>
 #include <QSerialPort>
-#include <QUdpSocket>
+#include <QTcpSocket>
 #include "ptz-device.hpp"
 
 class visca_encoding {
