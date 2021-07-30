@@ -687,7 +687,7 @@ ViscaUDPSocket::ViscaUDPSocket(int port) :
 		blog(LOG_INFO, "VISCA-over-IP bind to port %i failed", visca_port);
 		return;
 	}
-	connect(&visca_socket, &QUdpSocket::readyRead, this, &ViscaUDPSocket::poll);
+	connect(&visca_socket, &QTcpSocket::readyRead, this, &ViscaUDPSocket::poll);
 }
 
 void ViscaUDPSocket::receive_datagram(QNetworkDatagram &dg)

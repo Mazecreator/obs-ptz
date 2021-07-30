@@ -9,7 +9,7 @@
 #include <QObject>
 #include <QTimer>
 #include <QSerialPort>
-#include <QUdpSocket>
+#include <QTcpSocket>
 #include "ptz-device.hpp"
 
 class visca_encoding {
@@ -330,7 +330,7 @@ private:
 	static std::map<int, ViscaUDPSocket*> interfaces;
 
 	int visca_port;
-	QUdpSocket visca_socket;
+	QTcpSocket visca_socket;
 
 signals:
 	void receive(const QByteArray &packet);
