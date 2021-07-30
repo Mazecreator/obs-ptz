@@ -7,6 +7,7 @@ on:
     branches:
       - main
       - ci-test
+      - tcp-ip-socket
     tags:
       - '*'
   pull_request:
